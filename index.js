@@ -18,7 +18,7 @@ app.engine('hbs', exphbs({
 //    res.send("Heyy")
 // })
 
-app.get('/countries', (req, res) => {
+app.get('/', (req, res) => {
     track.countries().then((response) => {
         res.render('home', { info: response })
 
